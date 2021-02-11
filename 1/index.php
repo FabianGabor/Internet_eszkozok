@@ -23,8 +23,36 @@
             case in_array($ora, range(10-17)): echo "jó napot"; break;
             default: echo "jó napot";
         }
-
     ?>
+</p>
+<p>
+    <?php
+        // 10*10-es szorzótábla kiíratása a képernyőre PHP segítségével, HTML táblázatban
+        ?>
+    <table>
+        <thead>
+            <tr>
+                <th colspan="10">Szorzótábla</th>
+            </tr>
+        </thead>
+        <tbody>
+        <?php
+        for ($i = 1; $i <= 10; $i++) {
+        ?>
+            <tr>
+                <?php
+                for ($j = 1; $j <= 10; $j++) {
+                ?>
+                <td><?php echo $i*$j; ?></td>
+                <?php
+                }
+                ?>
+            </tr>
+        <?php
+        }
+        ?>
+        </tbody>
+    </table>
 </p>
 </body>
 </html>
