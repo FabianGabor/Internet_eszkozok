@@ -3,10 +3,47 @@
 <head>
     <meta charset="utf-8">
     <title></title>
+
+    <style type="text/css">
+        .text-center {
+            text-align: center; }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 1rem;
+            border-radius: 0; }
+        thead,
+        tbody,
+        tfoot {
+            border: 1px solid #f1f1f1;
+            background-color: #fefefe; }
+        thead {
+            background: #f8f8f8;
+            color: #0a0a0a; }
+        thead tr,
+        tfoot tr {
+            background: transparent; }
+        thead th,
+        thead td {
+            padding: 0.5rem 0.625rem 0.625rem;
+            font-weight: bold;}
+        tbody th,
+        tbody td {
+            padding: 0.5rem 0.625rem 0.625rem; }
+        tbody tr:nth-child(even) {
+            border-bottom: 0;
+            background-color: #f1f1f1; }
+        table.unstriped tbody {
+            background-color: #fefefe; }
+        table.unstriped tbody tr {
+            border-bottom: 0;
+            border-bottom: 1px solid #f1f1f1;
+            background-color: #fefefe; }
+    </style>
 </head>
 
 <body>
-<p id="loaded"></p>
 <p>
     <?php
         // Aktuális dátum kiíratása PHP függvényhívással
