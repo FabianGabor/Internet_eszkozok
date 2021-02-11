@@ -18,32 +18,42 @@
         // 05-09: jó reggelt, 10-17: jó napot, 18-04: jó estét
         $ora = date("H");
         switch ( $ora ) {
-            case in_array($ora, range(0-4)): echo "jó estét"; break;
-            case in_array($ora, range(5-9)): echo "jó reggel"; break;
-            case in_array($ora, range(10-17)): echo "jó napot"; break;
+            case in_array($ora, range(0,4)): echo "jó estét"; break;
+            case in_array($ora, range(5,9)): echo "jó reggel"; break;
+            case in_array($ora, range(10,17)): echo "jó napot"; break;
             default: echo "jó napot";
         }
     ?>
 </p>
-<p>
+
     <?php
         // 10*10-es szorzótábla kiíratása a képernyőre PHP segítségével, HTML táblázatban
         ?>
-    <table>
+    <table border="1px">
         <thead>
             <tr>
-                <th colspan="10">Szorzótábla</th>
+                <th colspan="11">Szorzótábla</th>
             </tr>
         </thead>
         <tbody>
+        <tr style="background-color: #ccc">
+        <?php
+        for ($i = 0; $i <= 10; $i++) {
+        ?>
+                <td><?php echo $i; ?></td>
+        <?php
+        }
+        ?>
+        </tr>
         <?php
         for ($i = 1; $i <= 10; $i++) {
         ?>
             <tr>
+                <td style="background-color: #ccc"><?php echo $i; ?></td>
                 <?php
                 for ($j = 1; $j <= 10; $j++) {
                 ?>
-                <td><?php echo $i*$j; ?></td>
+                    <td><?php echo $i*$j; ?></td>
                 <?php
                 }
                 ?>
