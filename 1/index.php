@@ -63,6 +63,43 @@
         ?>
         </tbody>
     </table>
-</p>
+
+<?php
+$total = "";
+$n1 = "";
+$n2 = "";
+if(isset($_POST['submit'])) {
+    if(is_numeric($_POST['n1']) && is_numeric($_POST['n2'])) {
+        $n1 = $_POST['n1'];
+        $n2 = $_POST['n2'];
+        if($_POST['op'] == '+')
+            $total = $_POST['n1'] + $_POST['n2'];
+
+        if($_POST['op'] == '-')
+            $total = $_POST['n1'] - $_POST['n2'];
+
+        if($_POST['op'] == '*')
+            $total = $_POST['n1'] * $_POST['n2'];
+
+        if($_POST['op'] == '/')
+            $total = $_POST['n1'] / $_POST['n2'];
+    } else {
+        echo 'Hiba';
+    }
+}
+?>
+    <form method="post" action="index.php">
+        <input name="n1" type="text" value="<?php echo $n1; ?>">
+        <select name="op">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        </select>
+        <input name="n2" type="text" value="<?php echo $n2; ?>">
+        <input name="submit" type="submit" value="=">
+        <span><?php echo $total; ?></span>
+    </form>
+
 </body>
 </html>
