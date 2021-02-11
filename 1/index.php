@@ -105,7 +105,7 @@ if(isset($_POST['submit'])) {
 
     <form id="jqueryForm">
         <input id="n1" name="n1" type="text">
-        <select name="op">
+        <select id="op2" name="op2">
             <option value="+">+</option>
             <option value="-">-</option>
             <option value="*">*</option>
