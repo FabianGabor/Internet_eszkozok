@@ -65,6 +65,7 @@
     </table>
 
 <?php
+// Egyszerű számológép készítése HTML űrlap és PHP felhasználásával.
 $total = "";
 $n1 = "";
 $n2 = "";
