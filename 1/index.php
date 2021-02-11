@@ -56,6 +56,20 @@
         // 05-09: jó reggelt, 10-17: jó napot, 18-04: jó estét
         $ora = date("H");
 
+        /*
+        for ($ora = 0; $ora <=23; $ora++) {
+            switch ( $ora ) {
+                case in_array($ora, range(5,9)):
+                    echo $ora . " Jó reggel!"; break; // valamilyen okbol a 0 ertekre ide ugrik...
+                case in_array($ora, range(10,17)):
+                    echo $ora . " Jó napot!"; break;
+                default:
+                    echo $ora . " Jó estét!";
+            }
+            echo '<br>';
+        }
+        */
+
         //for ($ora = 0; $ora <=23; $ora++) {
             if (in_array($ora, range(5,9)))
                 echo
