@@ -18,53 +18,59 @@
         // Időszaknak megfelelő köszöntés a képernyőn PHP segítségével:
         // 05-09: jó reggelt, 10-17: jó napot, 18-04: jó estét
         $ora = date("H");
-        switch ( $ora ) {
-            case in_array($ora, range(0,4)): echo "jó estét"; break;
-            case in_array($ora, range(5,9)): echo "jó reggel"; break;
-            case in_array($ora, range(10,17)): echo "jó napot"; break;
-            default: echo "jó napot";
-        }
+
+        //for ($ora = 0; $ora <=23; $ora++) {
+            if (in_array($ora, range(5,9)))
+                echo
+                    //$ora .
+                    " Jó reggel!";
+            else
+                if (in_array($ora, range(10,17)))
+                    echo
+                        //$ora .
+                        " Jó napot!";
+                else echo
+                    //$ora .
+                    " Jó estét!";
+        //}
     ?>
 </p>
-<p>
-    <?php
-        // 10*10-es szorzótábla kiíratása a képernyőre PHP segítségével, HTML táblázatban
-        ?>
-    <table border="1px">
-        <thead>
-            <tr>
-                <th colspan="11">Szorzótábla</th>
-            </tr>
-        </thead>
-        <tbody>
-        <tr style="background-color: #ccc">
+<?php
+    // 10*10-es szorzótábla kiíratása a képernyőre PHP segítségével, HTML táblázatban
+    ?>
+<table class="text-center">
+    <thead>
+        <tr>
+            <th></th>
         <?php
-        for ($i = 0; $i <= 10; $i++) {
+        for ($i = 1; $i <= 10; $i++) {
         ?>
-                <td><?php echo $i; ?></td>
+            <th><?php echo $i; ?></th>
         <?php
         }
         ?>
         </tr>
-        <?php
-        for ($i = 1; $i <= 10; $i++) {
-        ?>
-            <tr>
-                <td style="background-color: #ccc"><?php echo $i; ?></td>
-                <?php
-                for ($j = 1; $j <= 10; $j++) {
-                ?>
-                    <td><?php echo $i*$j; ?></td>
-                <?php
-                }
-                ?>
-            </tr>
-        <?php
-        }
-        ?>
-        </tbody>
-    </table>
-</p>
+    </thead>
+<tbody>
+    <?php
+    for ($i = 1; $i <= 10; $i++) {
+    ?>
+        <tr>
+            <th><?php echo $i; ?></th>
+            <?php
+            for ($j = 1; $j <= 10; $j++) {
+            ?>
+                <td><?php echo $i*$j; ?></td>
+            <?php
+            }
+            ?>
+        </tr>
+    <?php
+    }
+    ?>
+    </tbody>
+</table>
+
 <?php
 // Egyszerű számológép készítése HTML űrlap és PHP felhasználásával.
 $total = "";
