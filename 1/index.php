@@ -6,11 +6,13 @@
 </head>
 
 <body>
+<p>
     <?php
         // Aktuális dátum kiíratása PHP függvényhívással
         echo date("Y.M.d. H:m:s");
         ?>
-    <br>
+</p>
+<p>
     <?php
         // Időszaknak megfelelő köszöntés a képernyőn PHP segítségével:
         // 05-09: jó reggelt, 10-17: jó napot, 18-04: jó estét
@@ -23,5 +25,6 @@
         }
 
     ?>
+</p>
 </body>
 </html>
