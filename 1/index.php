@@ -6,6 +6,7 @@
 </head>
 
 <body>
+<p id="loaded"></p>
 <p>
     <?php
         // Aktuális dátum kiíratása PHP függvényhívással
@@ -25,7 +26,7 @@
         }
     ?>
 </p>
-
+<p>
     <?php
         // 10*10-es szorzótábla kiíratása a képernyőre PHP segítségével, HTML táblázatban
         ?>
@@ -63,7 +64,7 @@
         ?>
         </tbody>
     </table>
-
+</p>
 <?php
 // Egyszerű számológép készítése HTML űrlap és PHP felhasználásával.
 $total = "";
@@ -102,5 +103,20 @@ if(isset($_POST['submit'])) {
         <span><?php echo $total; ?></span>
     </form>
 
+    <form id="jqueryForm">
+        <input id="n1" name="n1" type="text">
+        <select name="op">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        </select>
+        <input id="n2" name="n2" type="text">
+        <button id="submit2"> = </button>
+        <input id="result" type="text">
+    </form>
+
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js" integrity="sha512-WNLxfP/8cVYL9sj8Jnp6et0BkubLP31jhTG9vhL/F5uEZmg5wEzKoXp1kJslzPQWwPT1eyMiSxlKCgzHLOTOTQ==" crossorigin="anonymous"></script>
+<script src="calculator.js"></script>
 </html>
